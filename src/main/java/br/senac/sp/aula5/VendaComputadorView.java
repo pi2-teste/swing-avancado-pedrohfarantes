@@ -322,18 +322,36 @@ public class VendaComputadorView extends javax.swing.JFrame {
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
         // TODO add your handling code here:
-       String tipo;
-        if (radioPC.isSelected()) {
-            tipo = "PC";
-            meuComputador.setTipoComputador(tipo);
-        } else if (radioServidor.isSelected()) {
-            tipo = "Servidor";
-          meuComputador.setTipoComputador(tipo);
-        } else if (radioNotebook.isSelected()) {
-            tipo = "Notebook";
-           meuComputador.setTipoComputador(tipo);
+
+        if (radioPC.isSelected() && toogleWindows.isSelected()) {
+            JOptionPane.showMessageDialog(null, "Obrigado por comprar um PC com Windows");
+            System.out.println("Obrigado por comprar um PC com Windows");
         }
-        //fazer o restante para o que falta
+
+        if (radioServidor.isSelected() && toogleWindows.isSelected()) {
+            JOptionPane.showMessageDialog(null, "Obrigado por comprar um Servidor com Windows");
+            System.out.println("Obrigado por comprar um Servidor com Windows");
+        }
+
+        if (radioNotebook.isSelected() && toogleWindows.isSelected()) {
+            JOptionPane.showMessageDialog(null, "Obrigado por comprar um Notebook com Windows");
+            System.out.println("Obrigado por comprar um Notebook com Windows");
+        }
+
+        if (radioPC.isSelected() && toogleLinux.isSelected()) {
+            JOptionPane.showMessageDialog(null, "Obrigado por comprar um PC com Linux");
+            System.out.println("Obrigado por comprar um PC com Linux");
+        }
+
+        if (radioServidor.isSelected() && toogleLinux.isSelected()) {
+            JOptionPane.showMessageDialog(null, "Obrigado por comprar um Servidor com Linux");
+            System.out.println("Obrigado por comprar um Servidor com Linux");
+        }
+
+        if (radioNotebook.isSelected() && toogleLinux.isSelected()) {
+            JOptionPane.showMessageDialog(null, "Obrigado por comprar um Notebook com Linux");
+            System.out.println("Obrigado por comprar um Notebook com Linux");
+        }
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     /**
@@ -372,6 +390,7 @@ public class VendaComputadorView extends javax.swing.JFrame {
                 new VendaComputadorView().setVisible(true);
             }
         });
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

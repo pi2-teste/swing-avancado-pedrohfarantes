@@ -11,40 +11,19 @@ package br.senac.sp.aula5;
  */
 public class Computador {
 
-    public static String fabricante = "seu nome";
+    //variavel da classe
+    private static String fabricante = "seu nome";
 
-    public String tipoComputador = new String();
-    public String sistemaOperacional = new String();
-    public String HD = new String();
-    public String[] acessorios = new String[3];
-    public String[] serviços = new String[4];
+    //variaveis de instancia
+    private String tipoComputador;
+    private String sistemaOperacional;
+    private String HD;
+    private String[] acessorios;
+    private String[] serviços;
 
+    //construtor
     public Computador() {
 
-    }
-
-    public static String getFabricante() {
-        return fabricante;
-    }
-
-    public String getTipoComputador() {
-        return tipoComputador;
-    }
-
-    public String getSistemaOperacional() {
-        return sistemaOperacional;
-    }
-
-    public String getHD() {
-        return HD;
-    }
-
-    public String[] getAcessorios() {
-        return acessorios;
-    }
-
-    public String[] getServiços() {
-        return serviços;
     }
 
     public static void setFabricante(String fabricante) {
@@ -69,6 +48,30 @@ public class Computador {
 
     public void setServiços(String[] serviços) {
         this.serviços = serviços;
+    }
+
+    public static String getFabricante() {
+        return fabricante;
+    }
+
+    public String getTipoComputador() {
+        return tipoComputador;
+    }
+
+    public String getSistemaOperacional() {
+        return sistemaOperacional;
+    }
+
+    public String getHD() {
+        return HD;
+    }
+
+    public String[] getAcessorios() {
+        return acessorios;
+    }
+
+    public String[] getServiços() {
+        return serviços;
     }
 
 }
